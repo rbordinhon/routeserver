@@ -103,7 +103,7 @@ public class RouteServiceImpl implements RouteService, ErrorConsts {
 			if (rotaVo.distancia == null) {
 				throw new BussinessException("O valor da distancia e obrigatoria");
 			}
-			if (rotaVo.distancia > 0) {
+			if (rotaVo.distancia < 1) {
 				throw new BussinessException("A distancia deve ser maior que zero");
 			}
 			Local localOrigem = buscaLocal(rotaVo.origem);
