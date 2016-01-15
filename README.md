@@ -1,6 +1,6 @@
 #Route Service#
 
-###Solução:
+###Solução
    1. Para solucionar o problema do menor caminho 
    utilizei o framework JGRAPHT, que utiliza grafos
    que juntamente com o algoritmo de Dijkstra do framework. 
@@ -13,11 +13,11 @@
      - Usuário: routeserverapp 
      - Senha: wbPSphppAcQURhAe
 
-###Regras de negócio:
+###Regras de negócio
   1. Se for inserido o mesmo mapa, ele será apagado do banco e inserido novamente.
   2. A busca não é sensível ao tamanho das letras, elas podem ser maiúsculas ou minúsculas.
 
-### Execução:  
+### Execução  
   1. A execução do código pode ser feita através da internet  pelo servidor routeservice-rbprojects.rhcloud.com.
   2. Há também a opção de execução local através da classe de testes routeservice.web.teste.JsonMensagensTeste   
   Obs: A opção de execução local utiliza banco de dados de teste. 
@@ -29,7 +29,7 @@
   2. Em caso de sucesso o status Http é 200.
   3. Em caso de erro o status Http é diferente de 200.
 
-### Mensagens:
+### Mensagens
       http://routeservice-rbprojects.rhcloud.com/buscaMelhorCaminho
 		- POST: 
 	            {"mapa":"TESTE","origem":"A","destino":"D","autonomia":10,"custoPorLitro":2.50}
