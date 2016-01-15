@@ -13,7 +13,7 @@
      - Usuário: routeserverapp 
      - Senha: wbPSphppAcQURhAe
 
-###Regras de negocio:
+###Regras de negócio:
   1. Se for inserido o mesmo mapa, ele será apagado do banco e inserido novamente.
   2. A busca não é sensível ao tamanho das letras, elas podem ser maiúsculas ou minúsculas.
 
@@ -22,8 +22,11 @@
   2. Há também a opção de execução local, em um servidor Jetty embarcado no código, através da classe de testes routeservice.web.server.JettyEmbededLocalWebServer   
 
 ### Formato das mensagens do webservice:
-  1. Todas as mensagens devem ser configuradas como método POST e  com o header Content-Type = "application/json"'.     
-  2. Em caso de sucesso o status Http é 200 em caso de erro é diferente de 200.
+  1. Todas as mensagens devem ser configuradas com o método POST e o header Content-Type igual a "application/json"'.     
+
+### Mensagem de Resposta
+  2. Em caso de sucesso o status Http é 200.
+  3. Em caso de erro o status Http é diferente de 200.
 
 ### Mensagens:
       - http://routeservice-rbprojects.rhcloud.com/buscaMelhorCaminho
