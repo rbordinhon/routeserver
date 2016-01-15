@@ -8,8 +8,8 @@
    3. Para testes eu estou utilizando o banco de dados H2-DB e na internet estou utilizando MySQL.
    4. O webservice utiliza o tipo de dados JSON nas requisições e respostas.    
 
-###Banco de Dados Acesso
-     Através do link https://routeservice-rbprojects.rhcloud.com/phpmyadmin/
+###Banco de Dados
+     Acesso através do link https://routeservice-rbprojects.rhcloud.com/phpmyadmin/
      - Usuário: routeserverapp 
      - Senha: wbPSphppAcQURhAe
 
@@ -18,21 +18,21 @@
   2. A busca não é sensível ao tamanho das letras, elas podem ser maiúsculas ou minúsculas.
 
 ### Execução:  
-  - A execução do código pode ser feita através da internet  pelo servidor routeservice-rbprojects.rhcloud.com
-  - Há também a opção de execução local, que utiliza o banco de dados de teste H2-DB, em um servidor Jetty embarcado no código
-     através da classe de testes routeservice.web.server.JettyEmbededLocalWebServer   
-  - Formato das mensagens do webservice:
-       1. Todas as mensagens devem ser configuradas como método POST e  com o header Content-Type = "application/json"';      
-       2. Em caso de sucesso o status Http é 200 em caso de erro é diferente de 200.
-       3. Mensagens:
-	        
-		- http://routeservice-rbprojects.rhcloud.com/buscaMelhorCaminho
-			- POST: 
-		   		{"mapa":"TESTE","origem":"A","destino":"D","autonomia":10,"custoPorLitro":2.50}
-		   	- RESPOSTA COM SUCESSO:
-				{"rotas":[{"origem":"A","destino":"B","distancia":10},
-				{"origem":"B","destino":"D","distancia":15}],
-				"custo":6.25,"valorCustoDescritivo":"R$ 6,25","rota":"A-B-D"}
+  1. A execução do código pode ser feita através da internet  pelo servidor routeservice-rbprojects.rhcloud.com.
+  2. Há também a opção de execução local, em um servidor Jetty embarcado no código, através da classe de testes routeservice.web.server.JettyEmbededLocalWebServer   
+
+### Formato das mensagens do webservice:
+  1. Todas as mensagens devem ser configuradas como método POST e  com o header Content-Type = "application/json"'.     
+  2. Em caso de sucesso o status Http é 200 em caso de erro é diferente de 200.
+
+### Mensagens:
+      - http://routeservice-rbprojects.rhcloud.com/buscaMelhorCaminho
+	    	- POST: 
+	            {"mapa":"TESTE","origem":"A","destino":"D","autonomia":10,"custoPorLitro":2.50}
+	    	- RESPOSTA COM SUCESSO:
+	   	    - {"rotas":[{"origem":"A","destino":"B","distancia":10},
+		    {"origem":"B","destino":"D","distancia":15}],
+		    "custo":6.25,"valorCustoDescritivo":"R$ 6,25","rota":"A-B-D"}
 		   
 		- http://routeservice-rbprojects.rhcloud.com/inserirMapa
 			- POST: 
@@ -46,7 +46,7 @@
 					]
 					}
 			- RESPOSTA COM SUCESSO: Texto vazio
-	        - No caso de erro no servidor a resposta e:
-			{"errorMessage":"Descrição do erro"}
+	- No caso de erro no servidor a resposta e:
+	         {"errorMessage":"Descrição do erro"}
 
   
