@@ -95,10 +95,10 @@ public class RouteServiceImpl implements RouteService, ErrorConsts {
 
 		for (RotaVo rotaVo : rotas) {
 			if (rotaVo.origem == null) {
-				throw new BussinessException("Local de origem da rota obrigatorio");
+				throw new BussinessException("Local de origem da rota e obrigatorio");
 			}
 			if (rotaVo.destino == null) {
-				throw new BussinessException("Local de destino da rota obrigatorio");
+				throw new BussinessException("Local de destino da rota e obrigatorio");
 			}
 			if (rotaVo.distancia == null) {
 				throw new BussinessException("O valor da distancia e obrigatoria");

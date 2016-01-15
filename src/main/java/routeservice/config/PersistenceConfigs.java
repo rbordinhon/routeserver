@@ -47,8 +47,8 @@ public class PersistenceConfigs implements ApplicationContextAware {
 			logger.warn(openshiftHost);
 			dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 			dataSource.setUrl("jdbc:mysql://"+openshiftHost+"/routeservice");
-			dataSource.setUsername("adminTtxbKNh");
-			dataSource.setPassword("U2zTZkCGru8J");
+			dataSource.setUsername("routeserverapp");
+			dataSource.setPassword("wbPSphppAcQURhAe");
 			dataSource.setInitialSize(5);
 			dataSource.setMaxActive(10);
 		}
