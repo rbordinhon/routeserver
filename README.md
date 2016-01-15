@@ -30,9 +30,9 @@
 
 ### Mensagens:
       http://routeservice-rbprojects.rhcloud.com/buscaMelhorCaminho
-	    	- POST: 
+		- POST: 
 	            {"mapa":"TESTE","origem":"A","destino":"D","autonomia":10,"custoPorLitro":2.50}
-	    	- RESPOSTA COM SUCESSO:
+		- RESPOSTA COM SUCESSO:
 	   	    {"rotas":[{"origem":"A","destino":"B","distancia":10},
 		    {"origem":"B","destino":"D","distancia":15}],
 		    "custo":6.25,"valorCustoDescritivo":"R$ 6,25","rota":"A-B-D"}
