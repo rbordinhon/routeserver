@@ -1,3 +1,5 @@
+Route Server
+
 Solução:
    1 - Para solucionar o problema do menor caminho 
    utilizei o framework JGRAPHT, que utiliza grafos
@@ -13,14 +15,9 @@ Banco de Dados Acesso
       É  possível acessar o banco de dados através do link
     https://routeservice-rbprojects.rhcloud.com/phpmyadmin/
     com o usuário routeserverapp e senha wbPSphppAcQURhAe
-      
-   
 Regras de negocio:
   1 - Se for inserido o mesmo mapa, ele será apagado do banco e inserido novamente.
   2 - A busca não é sensível ao tamanho das letras, elas podem ser maiúsculas ou minúsculas.
-
-  
-  
 Execução:  
    - A execução do código pode ser feita através da internet  pelo servidor routeservice-rbprojects.rhcloud.com
    - Há também a opção de execução local, que utiliza o banco de dados de teste H2-DB, em um servidor Jetty embarcado no código
