@@ -122,7 +122,7 @@ public class PersistenceConfigs implements ApplicationContextAware {
 			properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
 			properties.setProperty("hibernate.dialect","org.hibernate.dialect.H2Dialect");
 		}else {
-			//properties.setProperty("hibernate.hbm2ddl.auto", "create");
+			properties.setProperty("hibernate.hbm2ddl.auto", "create");
 			properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 		}
 		
