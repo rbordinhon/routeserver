@@ -1,6 +1,7 @@
 Route Server
+============
 
-Solução:
+###Solução:
    1 - Para solucionar o problema do menor caminho 
    utilizei o framework JGRAPHT, que utiliza grafos
    que juntamente com o algoritmo de Dijkstra do framework. 
@@ -11,21 +12,20 @@ Solução:
    4 - O webservice utiliza o tipo de dados JSON nas requisições e respostas.    
    Obs: O desenvolvimento foi focado em uma solução minimalista.   
 
-Banco de Dados Acesso
-      É  possível acessar o banco de dados através do link
-    https://routeservice-rbprojects.rhcloud.com/phpmyadmin/
-    com o usuário routeserverapp e senha wbPSphppAcQURhAe
-Regras de negocio:
-  1 - Se for inserido o mesmo mapa, ele será apagado do banco e inserido novamente.
-  2 - A busca não é sensível ao tamanho das letras, elas podem ser maiúsculas ou minúsculas.
-Execução:  
-   - A execução do código pode ser feita através da internet  pelo servidor routeservice-rbprojects.rhcloud.com
-   - Há também a opção de execução local, que utiliza o banco de dados de teste H2-DB, em um servidor Jetty embarcado no código
+###Banco de Dados Acesso
+     Através do link https://routeservice-rbprojects.rhcloud.com/phpmyadmin/
+     com o usuário routeserverapp e senha wbPSphppAcQURhAe
+###Regras de negocio:
+  1. Se for inserido o mesmo mapa, ele será apagado do banco e inserido novamente.
+  2. A busca não é sensível ao tamanho das letras, elas podem ser maiúsculas ou minúsculas.
+###Execução:  
+  - A execução do código pode ser feita através da internet  pelo servidor routeservice-rbprojects.rhcloud.com
+  - Há também a opção de execução local, que utiliza o banco de dados de teste H2-DB, em um servidor Jetty embarcado no código
      através da classe de testes routeservice.web.server.JettyEmbededLocalWebServer   
-   - Formato das mensagens do webservice:
-       1 - Todas as mensagens devem ser configuradas como método POST e  com o header Content-Type = "application/json"';      
-       2 - Em caso de sucesso o status Http é 200 em caso de erro é diferente de 200.
-       3 - Mensagens:
+  - Formato das mensagens do webservice:
+       1. Todas as mensagens devem ser configuradas como método POST e  com o header Content-Type = "application/json"';      
+       2. Em caso de sucesso o status Http é 200 em caso de erro é diferente de 200.
+       3. Mensagens:
 	       http://routeservice-rbprojects.rhcloud.com/buscaMelhorCaminho
 		   POST: 
 		   {"mapa":"TESTE","origem":"A","destino":"D","autonomia":10,"custoPorLitro":2.50}
@@ -46,8 +46,7 @@ Execução:
 			]
 			}
 			RESPOSTA COM SUCESSO: Texto vazio
-			
-			No caso de erro no servidor a resposta e:
+	        	No caso de erro no servidor a resposta e:
 			{"errorMessage":"Descrição do erro"}
 
   
