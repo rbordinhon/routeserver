@@ -27,6 +27,11 @@ import routeservice.vo.RotaVo;
 @Transactional
 public class RouteServiceImpl implements RouteService, ErrorConsts {
 
+	private static final String A_DISTANCIA_DEVE_SER_MAIOR_QUE_ZERO = "A distancia deve ser maior que zero";
+	public static final String O_VALOR_DA_DISTANCIA_E_OBRIGATORIA = "O valor da distancia e obrigatoria";
+	public static final String LOCAL_DE_DESTINO_DA_ROTA_E_OBRIGATORIO = "Local de destino da rota e obrigatorio";
+	private static final String LOCAL_DE_ORIGEM_DA_ROTA_E_OBRIGATORIO = "Local de origem da rota e obrigatorio";
+	public static final String E_OBRIGATORIO_O_MAPA_TER_PELO_MENOS_UMA_ROTA = "E obrigatorio o mapa ter pelo menos uma rota";
 	@PersistenceContext
 	public EntityManager manager;
 
@@ -78,14 +83,12 @@ public class RouteServiceImpl implements RouteService, ErrorConsts {
 	public void inserirMapas(String mapaValue, RotaVo[] rotas) throws BussinessException {
 		
 		if (rotas == null || rotas.length == 0) {
-			throw new BussinessException("E obrigatorio o mapa ter pelo menos uma rota");
+			throw new BussinessException(E_OBRIGATORIO_O_MAPA_TER_PELO_MENOS_UMA_ROTA);
 		}
 		
 		Mapa mapa = buscaMapa(mapaValue);
 		if (mapa != null) {
 			removeMapa(mapa);
-			// throw new
-			// BussinessException(O_MAPA_JA_FOI_INSERIDO_ANTERIORMENTE);
 		}
 		mapa = new Mapa();
 		mapa.setDescricao(mapaValue);
@@ -95,16 +98,16 @@ public class RouteServiceImpl implements RouteService, ErrorConsts {
 
 		for (RotaVo rotaVo : rotas) {
 			if (rotaVo.origem == null) {
-				throw new BussinessException("Local de origem da rota e obrigatorio");
+				throw new BussinessException(LOCAL_DE_ORIGEM_DA_ROTA_E_OBRIGATORIO);
 			}
 			if (rotaVo.destino == null) {
-				throw new BussinessException("Local de destino da rota e obrigatorio");
+				throw new BussinessException(LOCAL_DE_DESTINO_DA_ROTA_E_OBRIGATORIO);
 			}
 			if (rotaVo.distancia == null) {
-				throw new BussinessException("O valor da distancia e obrigatoria");
+				throw new BussinessException(O_VALOR_DA_DISTANCIA_E_OBRIGATORIA);
 			}
 			if (rotaVo.distancia < 1) {
-				throw new BussinessException("A distancia deve ser maior que zero");
+				throw new BussinessException(A_DISTANCIA_DEVE_SER_MAIOR_QUE_ZERO);
 			}
 			Local localOrigem = buscaLocal(rotaVo.origem);
 			if (localOrigem == null) {
