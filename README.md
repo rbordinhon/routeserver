@@ -21,6 +21,7 @@
   1. A execução do código pode ser feita através da internet  pelo servidor routeservice-rbprojects.rhcloud.com.
   2. Há também a opção de execução local através da classe de testes routeservice.web.teste.JsonMensagensTeste   
   Obs: A opção de execução local utiliza banco de dados de teste. 
+
 ### Formato das mensagens do webservice:
   1. Todas as mensagens devem ser configuradas com o método POST e o header Content-Type igual a "application/json"'.     
 
