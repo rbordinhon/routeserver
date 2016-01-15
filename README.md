@@ -49,7 +49,7 @@
 					]
 					}
 		- RESPOSTA COM SUCESSO: Texto vazio
-       No caso de erro no servidor a resposta e:
+       No caso de erro no servidor a resposta é:
 	          {"errorMessage":"Descrição do erro"}
 
   
