@@ -3,7 +3,7 @@ package routeservice.vo;
 public class RotaVo {
 	public String origem;
 	public String destino;
-	public int distancia;
+	public Integer distancia;
 
 	public RotaVo(String origem, String destino, int distancia) {
 		super();

@@ -76,6 +76,11 @@ public class RouteServiceImpl implements RouteService, ErrorConsts {
 	@Override
 	@org.springframework.transaction.annotation.Transactional
 	public void inserirMapas(String mapaValue, RotaVo[] rotas) throws BussinessException {
+		
+		if (rotas == null || rotas.length > 0) {
+			throw new BussinessException("E obrigatorio o mapa ter pelo menos uma rota");
+		}
+		
 		Mapa mapa = buscaMapa(mapaValue);
 		if (mapa != null) {
 			removeMapa(mapa);
@@ -89,6 +94,18 @@ public class RouteServiceImpl implements RouteService, ErrorConsts {
 		manager.refresh(mapa);
 
 		for (RotaVo rotaVo : rotas) {
+			if (rotaVo.origem == null) {
+				throw new BussinessException("Local de origem da rota obrigatorio");
+			}
+			if (rotaVo.destino == null) {
+				throw new BussinessException("Local de destino da rota obrigatorio");
+			}
+			if (rotaVo.distancia == null) {
+				throw new BussinessException("O valor da distancia e obrigatoria");
+			}
+			if (rotaVo.distancia > 0) {
+				throw new BussinessException("A distancia deve ser maior que zero");
+			}
 			Local localOrigem = buscaLocal(rotaVo.origem);
 			if (localOrigem == null) {
 				localOrigem = new Local(rotaVo.origem);
