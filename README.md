@@ -1,21 +1,20 @@
-Route Server
-============
+#Route Server#
+
 ###Solução:
    1. Para solucionar o problema do menor caminho 
    utilizei o framework JGRAPHT, que utiliza grafos
    que juntamente com o algoritmo de Dijkstra do framework. 
-   2. A framework utilizada para fazer a persistência e o webservice
-   é o Spring.
-   3.  Para testes eu estou utilizando o banco de dados H2-DB 
-   e na execução na internet estou utilizando Mysql. 
-   4.  O webservice utiliza o tipo de dados JSON nas requisições e respostas.    
+   2. A framework utilizada para fazer a persistência e o webservice é o Spring.
+   3. Para testes eu estou utilizando o banco de dados H2-DB e na execução na internet estou utilizando Mysql.
+   4. O webservice utiliza o tipo de dados JSON nas requisições e respostas.    
 ###Banco de Dados Acesso
      Através do link https://routeservice-rbprojects.rhcloud.com/phpmyadmin/
-     com o usuário routeserverapp e senha wbPSphppAcQURhAe
+     Usuário: routeserverapp 
+     Senha: wbPSphppAcQURhAe
 ###Regras de negocio:
   1. Se for inserido o mesmo mapa, ele será apagado do banco e inserido novamente.
   2. A busca não é sensível ao tamanho das letras, elas podem ser maiúsculas ou minúsculas.
-###Execução:  
+### Execução:  
   - A execução do código pode ser feita através da internet  pelo servidor routeservice-rbprojects.rhcloud.com
   - Há também a opção de execução local, que utiliza o banco de dados de teste H2-DB, em um servidor Jetty embarcado no código
      através da classe de testes routeservice.web.server.JettyEmbededLocalWebServer   
