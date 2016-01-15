@@ -44,6 +44,7 @@ public class PersistenceConfigs implements ApplicationContextAware {
 		
 		}else {
 			final String openshiftHost = System.getenv("OPENSHIFT_MYSQL_DB_HOST")+":"+System.getenv("OPENSHIFT_MYSQL_DB_PORT");
+			logger.warn(openshiftHost);
 			dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 			dataSource.setUrl("jdbc:mysql://"+openshiftHost+"/routeservice");
 			dataSource.setUsername("adminTtxbKNh");
