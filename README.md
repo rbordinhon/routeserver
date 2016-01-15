@@ -29,15 +29,15 @@
   3. Em caso de erro o status Http é diferente de 200.
 
 ### Mensagens:
-        http://routeservice-rbprojects.rhcloud.com/buscaMelhorCaminho
+      http://routeservice-rbprojects.rhcloud.com/buscaMelhorCaminho
 	    	- POST: 
 	            {"mapa":"TESTE","origem":"A","destino":"D","autonomia":10,"custoPorLitro":2.50}
 	    	- RESPOSTA COM SUCESSO:
-	   	    - {"rotas":[{"origem":"A","destino":"B","distancia":10},
+	   	    {"rotas":[{"origem":"A","destino":"B","distancia":10},
 		    {"origem":"B","destino":"D","distancia":15}],
 		    "custo":6.25,"valorCustoDescritivo":"R$ 6,25","rota":"A-B-D"}
 		   
-	http://routeservice-rbprojects.rhcloud.com/inserirMapa
+      http://routeservice-rbprojects.rhcloud.com/inserirMapa
 		- POST: 
 	    	    {"mapa":"TESTE","rotas":[
 					 {"origem":"A","destino":"B","distancia":10}
@@ -49,7 +49,7 @@
 					]
 					}
 		- RESPOSTA COM SUCESSO: Texto vazio
-	No caso de erro no servidor a resposta e:
+       No caso de erro no servidor a resposta e:
 	          {"errorMessage":"Descrição do erro"}
 
   
