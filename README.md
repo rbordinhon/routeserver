@@ -37,9 +37,9 @@
 		    {"origem":"B","destino":"D","distancia":15}],
 		    "custo":6.25,"valorCustoDescritivo":"R$ 6,25","rota":"A-B-D"}
 		   
-		- http://routeservice-rbprojects.rhcloud.com/inserirMapa
-			- POST: 
-				 {"mapa":"TESTE","rotas":[
+	- http://routeservice-rbprojects.rhcloud.com/inserirMapa
+		- POST: 
+	    	    {"mapa":"TESTE","rotas":[
 					 {"origem":"A","destino":"B","distancia":10}
 					,{"origem":"B","destino":"D","distancia":15}
 					,{"origem":"A","destino":"C","distancia":20}
@@ -48,8 +48,8 @@
 					,{"origem":"D","destino":"E","distancia":30}
 					]
 					}
-			- RESPOSTA COM SUCESSO: Texto vazio
+		- RESPOSTA COM SUCESSO: Texto vazio
 	- No caso de erro no servidor a resposta e:
-	         {"errorMessage":"Descrição do erro"}
+	          {"errorMessage":"Descrição do erro"}
 
   
