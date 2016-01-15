@@ -1,17 +1,14 @@
 Route Server
 ============
-
 ###Solução:
-   1 - Para solucionar o problema do menor caminho 
+   1. Para solucionar o problema do menor caminho 
    utilizei o framework JGRAPHT, que utiliza grafos
    que juntamente com o algoritmo de Dijkstra do framework. 
-   2 - A framework utilizada para fazer a persistência e o webservice
+   2. A framework utilizada para fazer a persistência e o webservice
    é o Spring.
-   3 - Para testes eu estou utilizando o banco de dados H2-DB 
+   3.  Para testes eu estou utilizando o banco de dados H2-DB 
    e na execução na internet estou utilizando Mysql. 
-   4 - O webservice utiliza o tipo de dados JSON nas requisições e respostas.    
-   Obs: O desenvolvimento foi focado em uma solução minimalista.   
-
+   4.  O webservice utiliza o tipo de dados JSON nas requisições e respostas.    
 ###Banco de Dados Acesso
      Através do link https://routeservice-rbprojects.rhcloud.com/phpmyadmin/
      com o usuário routeserverapp e senha wbPSphppAcQURhAe
