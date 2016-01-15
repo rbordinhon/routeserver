@@ -77,7 +77,7 @@ public class RouteServiceImpl implements RouteService, ErrorConsts {
 	@org.springframework.transaction.annotation.Transactional
 	public void inserirMapas(String mapaValue, RotaVo[] rotas) throws BussinessException {
 		
-		if (rotas == null || rotas.length > 0) {
+		if (rotas == null || rotas.length == 0) {
 			throw new BussinessException("E obrigatorio o mapa ter pelo menos uma rota");
 		}
 		
