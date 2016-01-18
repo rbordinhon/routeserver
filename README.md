@@ -10,7 +10,7 @@
 
 ###Banco de Dados
      Acesso através do link https://routeservice-rbprojects.rhcloud.com/phpmyadmin/
-     - Usuário: routeserverapp 
+     - Usuário: routeserverapp
      - Senha: wbPSphppAcQURhAe
 
 ###Regras de negócio
